@@ -1,0 +1,235 @@
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+		
+	<script>
+/* AO CLICAR EM ALGUMA TAG <P>, ELA DESAPARECE*/
+		$(document).ready(function(){
+		  $("p").click(function(){
+		    $(this).hide();
+		    
+		  });
+		});
+
+//AO CLICAR EM IMAGEM, ELA DESAPARECE
+		$(document).ready(function(){
+		  $("img").click(function(){
+		    $(this).hide();
+		  });
+		});
+
+//AO CLICAR EM ALGUMA TAG <H3>, ELA EXIBE TODOS PARÁGRAFOS (SE ALGUM DELES ESTIVER ESCONDIDO). ALÉM DISSO, MODIFICA OS SUBTÍTULOS (H3).
+		$(document).ready(function(){
+		  $("h3").click(function(){
+		    $("p").show();
+	            var myElement = $("h3");
+		    myElement.text("Os H3 foram modificados!");
+		  });
+		});
+
+//AO CLICAR NO BOTÃO 1, MOSTRA OU ESCONDE TODOS OS ELEMENTOS DE SUA COLUNA (C1)
+		$(document).ready(function(){
+		  $("#botao1").click(function(){
+		    $(".c1").toggle();
+		  });
+		});
+
+//AO CLICAR NO BOTÃO 2, MOSTRA OU ESCONDE TODOS OS ELEMENTOS DE SUA COLUNA (C2)
+		$(document).ready(function(){
+		  $("#botao2").click(function(){
+		    $(".c2").toggle();
+		  });
+		});
+
+//AO CLICAR NO BOTÃO 3, MOSTRA OU ESCONDE TODOS OS ELEMENTOS DE SUA COLUNA (C3)
+		$(document).ready(function(){
+		  $("#botao3").click(function(){
+		    $(".c3").toggle();
+		  });
+		});
+
+//AO CLICAR NO BOTÃO 1img, MOSTRA OU ESCONDE A IMAGEM 1
+		$(document).ready(function(){
+		  $("#botao1img").click(function(){
+		    $("#img1").toggle();
+		  });
+		});		
+//AO CLICAR NO BOTÃO 2img, MOSTRA OU ESCONDE A IMAGEM 2
+		$(document).ready(function(){
+		  $("#botao2img").click(function(){
+		    $("#img2").toggle();
+		  });
+		});
+//AO CLICAR NO BOTÃO 3img, MOSTRA OU ESCONDE A IMAGEM 3
+		$(document).ready(function(){
+		  $("#botao3img").click(function(){
+		    $("#img3").toggle();
+		  });
+		});
+//AO CLICAR NO BOTÃO 0, MOSTRA UMA MENSAGEM
+		$(document).ready(function() {
+  		  $("#botao0").click(function(){
+  		  var myElement = $("#parag");
+  		  myElement.text("Seja bem vindo(a)!!!");
+  		  });
+		});
+
+	</script>
+  <style>
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+   
+.geral{
+  background-color:#f66f24;
+  width:100%;
+  height:100%;
+}
+  
+.column {
+  float: left;
+  width: 20%;
+padding-left: 35px;
+  padding-right: 35px;  
+	background-color: white;
+  height: 100%; /* Should be removed. Only for demonstration */
+  border-bottom: 1px solid black;
+}
+
+.column1 {
+  float: left;
+  width: 0px;
+background-color: white;
+  padding-left:   70px;
+  padding-right:  70px;
+  height: 100%; /* Should be removed. Only for demonstration */
+  border-bottom: 1px solid black;
+}
+
+.row {
+  float: left;
+  width: 100%;
+  background-color:white; 
+  height:30%;
+   
+}
+
+.row1 {
+  float: left;
+  width: 100%;
+  background-color:white; 
+  height:10%;
+   
+}
+  
+img {
+  border-radius: 50%;
+  align:center;
+}  
+  
+h3{
+  font-family: "Arial";
+  color: white;
+  font-size: 26;
+  text-align: center;
+}
+
+p{
+  font-family: "Arial";
+  color: white;
+  font-size: 18;
+  text-align: center;
+}
+
+a{
+  font-family: "Calibri";
+  color: white;
+  font-size: 18;
+  text-align: center;
+}
+
+button{
+  align:center;
+  text-align: center;
+}
+  
+c1, c2, c3{
+  align:center;
+  text-align: center;
+}
+
+p.black{
+  color:black;
+  font-size: 22;
+}
+  </style>
+
+
+  
+</head>
+
+
+
+<section class="geral">
+<div class="row1">
+	<p id="parag" class="black"><p>
+	<button type="button" id="botao0">Exibir Mensagem</button><br></div>
+
+      <div class="row">
+	<div class="column1">
+		
+	</div>
+  	<div class="column">
+    		<br><br><br>
+
+		<img id="img1" src="https://www.w3schools.com/howto/img_avatar.png" class="center" alt="Avatar" style="width:235px">
+		<h3 class="c1">Meditation Lessons</h3>
+		<p class="c1" id="parag1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		<br>
+		<a class="c1" href="https://nicepage.com/k/aesthetic-html-templates">LEARN MORE</a>
+		<br>
+		<button type="button" id="botao1img">Imagem</button><br>
+		<button type="button" id="botao1">Descrição</button><br>
+  	</div>
+
+  	<div class="column">
+    		<br><br><br>
+
+		<img id="img2" src="https://www.w3schools.com/howto/img_avatar2.png" class="center" alt="Avatar" style="width:235px">
+		<h3 class="c2">Top Courses</h3>		
+		<p class="c2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		<br>
+		<a class="c2" href="https://nicepage.com/k/aesthetic-html-templates">LEARN MORE</a>
+		<br>
+		<button type="button" id="botao2img">Imagem</button><br>
+		<button type="button" id="botao2">Descrição</button></button><br>
+ 	</div>
+
+ 	<div class="column">
+		<br><br><br>
+
+		<img id="img3" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" class="center" alt="Avatar" style="width:235px">
+		<h3 class="c3">Learn Spanish</h3>
+		<p class="c3">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		<br>
+		<a class="c3" href="https://nicepage.com/k/aesthetic-html-templates">LEARN MORE</a><br>
+		<button type="button" id="botao3img">Imagem</button><br>
+		<button type="button" id="botao3">Descrição</button></button><br>
+
+  	</div>
+	<div class="column1">
+	</div>
+      </div>
+      
+</section>
+    
+</html>
